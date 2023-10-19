@@ -1,15 +1,24 @@
+/* React imports */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+
+/* Third-party imports */
+import { RouterProvider } from 'react-router-dom';
+
+/* Local imports */
 import reportWebVitals from './reportWebVitals';
+import { router } from './routes/router';
+
+/* CSS imports */
+import './index.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
